@@ -1,0 +1,40 @@
+﻿<Window x:Class="MemoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="JSONメモアプリ"
+        Height="500"
+        Width="800">
+
+    <DockPanel>
+
+        <StackPanel DockPanel.Dock="Top"
+                    Orientation="Horizontal"
+                    Margin="5">
+
+            <Button Content="ファイルを開く"
+                    Width="100"
+                    Margin="5"
+                    Click="LoadButton_Click"/>
+
+            <Button Content="上書き保存"
+                    Width="100"
+                    Margin="5"
+                    Click="SaveButton_Click"/>
+
+            <Button Content="名前を付けて保存"
+                    Width="130"
+                    Margin="5"
+                    Click="SaveAsButton_Click"/>
+
+        </StackPanel>
+
+        <TextBox x:Name="MemoTextBox"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"
+                 Margin="10"/>
+
+    </DockPanel>
+
+</Window>
